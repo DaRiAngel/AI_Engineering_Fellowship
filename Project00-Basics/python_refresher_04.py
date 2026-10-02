@@ -1,186 +1,12 @@
-
-print("************************************************************")
-# 05_conditionals.py
-# Making decisions with if, elif, and else
-
-# Basic if statement
-age = int(input("How old are you? "))
-
-if age >= 18:
-    print("You are an adult!")
-else:
-    print("You are a minor.")
-
-# Multiple conditions with elif
-score = int(input("What's your test score? "))
-
-if score >= 90:
-    print("Grade: A")
-elif score >= 80:
-    print("Grade: B")
-elif score >= 70:
-    print("Grade: C")
-elif score >= 60:
-    print("Grade: D")
-else:
-    print("Grade: F")
-
-# Comparison operators
-x = 10
-y = 5
-
-print("x == y:", x == y)  # Equal to
-print("x != y:", x != y)  # Not equal to
-print("x > y:", x > y)    # Greater than
-print("x < y:", x < y)    # Less than
-print("x >= y:", x >= y)  # Greater than or equal
-print("x <= y:", x <= y)  # Less than or equal
-
-# Logical operators
-temperature = 75
-is_sunny = True
-
-if temperature > 70 and is_sunny:
-    print("Perfect weather for a picnic!")
-elif temperature > 70 or is_sunny:
-    print("Pretty good weather!")
-else:
-    print("Stay inside today.")
-
-# Checking if something is in a range
-number = int(input("Enter a number: "))
-if 1 <= number <= 10:
-    print("Number is between 1 and 10")
-else:
-    print("Number is outside the range 1-10")
-
-print("************************************************************")
-# 06_loops.py
-# Repeating code with for and while loops
-
-# For loops - when you know how many times to repeat
-print("Counting to 5:")
-for i in range(5):  # 0, 1, 2, 3, 4
-    print(i)
-
-print("\nCountdown:")
-for i in range(5, 0, -1):  # 5, 4, 3, 2, 1
-    print(i)
-print("Blast off!")
-
-# Different range() patterns
-print("\nNumbers 1 to 10:")
-for num in range(1, 11):  # Start at 1, end before 11
-    print(num, end=" ")
-print()
-
-print("\nEven numbers from 0 to 20:")
-for num in range(0, 21, 2):  # Start at 0, end before 21, step by 2
-    print(num, end=" ")
-print()
-
-# While loops - when you don't know exactly how many times
-print("\nGuessing game:")
-secret_number = 7
-guess = 0
-
-while guess != secret_number:
-    guess = int(input("Guess the number (1-10): "))
-    if guess < secret_number:
-        print("Too low!")
-    elif guess > secret_number:
-        print("Too high!")
-    else:
-        print("Correct!")
-
-# Using break and continue
-print("\nNumbers 1-10, but skip 5:")
-for i in range(1, 11):
-    if i == 5:
-        continue  # Skip the rest of this iteration
-    print(i, end=" ")
-print()
-
-print("\nStopping at 7:")
-for i in range(1, 11):
-    if i == 7:
-        break  # Exit the loop completely
-    print(i, end=" ")
-print()
-
-print("************************************************************")
-# 07_lists.py
-# Lists - storing multiple items in one variable
-
-# Creating lists
-fruits = ["apple", "banana", "orange", "grape"]
-numbers = [1, 2, 3, 4, 5]
-mixed = ["hello", 42, 3.14, True]  # Lists can hold different types
-
-print("Fruits:", fruits)
-print("Numbers:", numbers)
-
-# Accessing list items (indexing starts at 0)
-print("First fruit:", fruits[0])    # apple
-print("Last fruit:", fruits[-1])    # grape (negative indexing)
-print("Second number:", numbers[1]) # 2
-
-# List length
-print("Number of fruits:", len(fruits))
-
-# Adding items to lists
-fruits.append("kiwi")  # Add to end
-print("After adding kiwi:", fruits)
-
-fruits.insert(1, "mango")  # Insert at position 1
-print("After inserting mango:", fruits)
-
-# Removing items
-fruits.remove("banana")  # Remove first occurrence
-print("After removing banana:", fruits)
-
-last_fruit = fruits.pop()  # Remove and return last item
-print("Removed:", last_fruit)
-print("Remaining fruits:", fruits)
-
-# Checking if item is in list
-if "apple" in fruits:
-    print("Apple is in the list!")
-
-# Looping through lists
-print("\nAll fruits:")
-for fruit in fruits:
-    print(f"I like {fruit}")
-
-print("\nFruits with their positions:")
-for i, fruit in enumerate(fruits):
-    print(f"{i}: {fruit}")
-
-# List slicing
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print("First 3 numbers:", numbers[:3])      # [0, 1, 2]
-print("Last 3 numbers:", numbers[-3:])      # [7, 8, 9]
-print("Middle numbers:", numbers[3:7])      # [3, 4, 5, 6]
-print("Every other number:", numbers[::2])  # [0, 2, 4, 6, 8]
 print("************************************************************")
 # 08_functions.py
 # Functions - reusable blocks of code
 
-# Basic function definition
-def greet():
-    print("Hello there!")
-    print("How are you today?")
-
-# Calling the function
-greet()
-greet()  # Can call it multiple times
-
+# Basic function definitions
 # Function with parameters
 def greet_person(name):
     print(f"Hello, {name}!")
     print(f"Nice to meet you, {name}!")
-
-greet_person("Alice")
 greet_person("Bob")
 
 # Function with multiple parameters
@@ -246,9 +72,13 @@ def main():
 def add_numbers_return(a, b):
     return a + b
 
+
+
 # Run the main function
 if __name__ == "__main__":
     main()
+
+
 print("************************************************************")
 # 09_dictionaries.py
 # Dictionaries - storing key-value pairs
